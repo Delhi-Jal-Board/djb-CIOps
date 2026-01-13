@@ -147,9 +147,6 @@ spec:
                                 echo "${image} pushed successfully!"
                                 }     
                             }
-                            container('jnlp') {
-                                sh 'true'
-                            }
                         }
                     }
                 }
