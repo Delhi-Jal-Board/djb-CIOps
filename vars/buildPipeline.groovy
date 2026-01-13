@@ -129,7 +129,10 @@ spec:
                                     --no-push=${noPushImage} \
                                     --cache-repo=delhijalboard/cache/cache
                                   """  
-                                  echo "${image} and ${gcr_image} pushed successfully!!"                              
+                                  echo "${image} and ${gcr_image} pushed successfully!!"  
+                                }
+                                container('jnlp') {
+                                    sh 'true'
                                 }
                                 else{
                                 sh """
