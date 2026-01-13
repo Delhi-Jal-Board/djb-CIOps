@@ -148,7 +148,7 @@ spec:
                                 }     
                             }
                             container('jnlp') {
-                                    sh 'true'
+                                sh 'true'
                             }
                         }
                     }
