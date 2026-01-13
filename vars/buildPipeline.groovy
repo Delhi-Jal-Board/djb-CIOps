@@ -131,9 +131,6 @@ spec:
                                   """  
                                   echo "${image} and ${gcr_image} pushed successfully!!"  
                                 }
-                                container('jnlp') {
-                                    sh 'true'
-                                }
                                 else{
                                 sh """
                                     echo \"Attempting to build image,  ${image}\"
@@ -148,7 +145,10 @@ spec:
                                     --cache-repo=delhijalboard/cache/cache
                                 """
                                 echo "${image} pushed successfully!"
-                                }                                
+                                }     
+                                container('jnlp') {
+                                    sh 'true'
+                                }
                             }
                         }
                     }
