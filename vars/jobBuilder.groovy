@@ -12,7 +12,7 @@ metadata:
 spec:
   containers:
   - name: build-utils
-    image: egovio/build-utils:7-master-95e76687
+    image: docker.io/egovio/build-utils:7-master-95e76687
     imagePullPolicy: IfNotPresent
     command:
     - cat
