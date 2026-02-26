@@ -11,6 +11,13 @@ metadata:
   name: build-utils
 spec:
   containers:
+  - name: jnlp
+    image: docker.io/jenkins/inbound-agent:4.3-4-alpine
+    args: ['\$(JENKINS_SECRET)', '\$(JENKINS_NAME)']
+    resources:
+      requests:
+        memory: "256Mi"
+        cpu: "100m"
   - name: build-utils
     image: docker.io/egovio/build-utils:7-master-95e76687
     imagePullPolicy: IfNotPresent
